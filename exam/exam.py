@@ -1,8 +1,25 @@
+"""
+Expense Class:
+Represents an individual financial expense.
+Attributes:
+1. id: A unique identifier generated as a UUID string.
+2. title: A string representing the title of the expense.
+3. amount: A float representing the amount of the expense.
+4. created_at: A timestamp indicating when the expense was created (UTC).
+5. updated_at: A timestamp indicating the last time the expense was updated (UTC)
+
+"""
+
 import uuid
 from datetime import datetime, timezone
 
-
-
+"""
+__init__ :this method initializes the attributes.
+datetime.utcnow(): an update method that allows updating the title and/or amount of the
+expense.
+a to_dict method that returns a dictionary representation of the expense.
+__init__ method to initialize the expenses list.
+"""
 class Expense:
     def __init__(self, title, amount):
         self.id = str(uuid.uuid4())
@@ -10,11 +27,14 @@ class Expense:
         self.amount = amount
         self.created_at = datetime.now(timezone.utc)
         self.updated_at = self.updated_at
+
+
+
         
-    def update(self, title=None, amount=None):
-        if title is not None:
+     def update(self, title=None, amount=None):
+        if title != None:
             self.title = title
-        if amount is not None:
+        if amount != None:
             self.amount = amount
         self.updated_at = datetime.utcnow()
 
