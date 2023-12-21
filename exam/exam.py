@@ -1,14 +1,3 @@
-"""
-Expense Class:
-Represents an individual financial expense.
-Attributes:
-1. id: A unique identifier generated as a UUID string.
-2. title: A string representing the title of the expense.
-3. amount: A float representing the amount of the expense.
-4. created_at: A timestamp indicating when the expense was created (UTC).
-5. updated_at: A timestamp indicating the last time the expense was updated (UTC)
-
-"""
 
 import uuid
 from datetime import datetime, timezone
@@ -26,12 +15,10 @@ class Expense:
         self.title = title
         self.amount = amount
         self.created_at = datetime.now(timezone.utc)
-        self.updated_at = self.updated_at
+        self.updated_at = datetime.now(timezone.utc)
 
 
-
-        
-     def update(self, title=None, amount=None):
+    def update(self, title=None, amount=None):
         if title != None:
             self.title = title
         if amount != None:
@@ -52,7 +39,7 @@ class ExpenseDatabase:
         self.expenses = []
 
     def add_expense(self, title, amount):
-        expense = Expense(title, amount)
+        expense = expense(title, amount)
         self.expenses.append(expense)
 
     def remove_expense(self, expense_id):

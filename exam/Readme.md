@@ -28,3 +28,14 @@ Methods:
 4. get_expense_by_id: Retrieves an expense by ID.
 5. get_expense_by_title: Retrieves expenses by title.
 6. to_dict: Returns a list of dictionaries representing expenses.
+
+ HOW TO CLONE THIS PROJECt?
+    To clone this project, 
+    use (git clone) command on your terminal
+    git clone https://github.com/emmanuel-paul/alt-school-de-github-in
+
+
+HOW TO RUN THE CODE?
+ firstly, you clone the repository from github to local machine(terminal).
+ install python on your computer.
+ run the script using 'python main.py' or 'python3 main.py' depending on your python version.
